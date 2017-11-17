@@ -1,0 +1,9 @@
+seqdiag {
+  client -> Server [label = "Connect (string teamName = FalconsTeamA)"];
+  client <-- Server [label = "return int8 teamId = 0"];
+
+  client -> Server [label = "Connect (string teamName = CambadaTeamA)"];
+  client <-- Server [label = "return int8 teamId = 1"];
+
+}
+

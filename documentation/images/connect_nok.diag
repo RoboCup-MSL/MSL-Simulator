@@ -1,0 +1,8 @@
+seqdiag {
+  client -> Server [label = "Connect (string teamName = FalconsTeamA)"];
+  client <-- Server [label = "return int8 teamId = 0"];
+
+  client -> Server [label = "Connect (string teamName = FalconsTeamA)"];
+  client <-- Server [label = "return int8 teamId = -1", note = "Twice same team name will give an error"];
+}
+
