@@ -1,0 +1,8 @@
+seqdiag {
+  client -> Server [label = "Connect (string teamName = SimRef1, enum clientType = referee)"];
+  client <-- Server [label = "return int8 teamId = 2"];
+
+  client -> Server [label = "Connect (string teamName = SimRef2, clientType = referee)"];
+  client <-- Server [label = "return int8 teamId = -1", note = "Two referees will give an error"];
+}
+
