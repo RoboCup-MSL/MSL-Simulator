@@ -1,8 +1,8 @@
 seqdiag {
-  client -> Server [label = "Connect (string teamName = FalconsTeamA)"];
+  client -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
   client <-- Server [label = "return int8 teamId = 0"];
 
-  client -> Server [label = "Connect (string teamName = CambadaTeamA)"];
+  client -> Server [label = "Connect (string teamName = CambadaTeamA, enum clientType = participant)"];
   client <-- Server [label = "return int8 teamId = 1"];
 
 }
