@@ -7,3 +7,7 @@ docImage: $(docImageObjs)
 
 %.png: %.diag
 	seqdiag $^ $@
+
+
+clean:
+	rm -f documentation/images/*.png
