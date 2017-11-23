@@ -1,0 +1,17 @@
+seqdiag {
+  edge_length = 500;  // default value is 192
+
+  client -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
+  client <-- Server [label = "return int8 teamId = 0"];
+
+  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 1)"];
+  client <-- Server [label = "return int8 robotId = 1"];
+
+
+ === Spawned robot is prerequisite ===
+
+  client -> Server [label = "Despawn (int8 teamId = 0, robotId = 1)"];
+  client <-- Server [label = "return int8 robotId = 1"];
+
+}
+
