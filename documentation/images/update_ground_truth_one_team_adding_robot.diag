@@ -1,0 +1,25 @@
+seqdiag {
+  edge_length = 500;  // default value is 192
+
+  client -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
+  client <-- Server [label = "return int8 teamId = 0"];
+
+  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 1)"];
+  client <-- Server [label = "return int8 robotId = 1"];
+
+  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {1.0,1.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 2)"];
+  client <-- Server [label = "return int8 robotId = 2"];
+
+  === Connected team and spawned robots are prerequisite ===
+
+  Server -> client [label = "updateGroundTruth ( timestamp, ballInfo, robotInfo = {robot1Info, robot2Info}, \n lastTouchedBall = robot1Info, \n colisions = {(robot1Info, robot2Info),(robotXInfo, robotYInfo)})"];
+
+  === Adding another robot for team 0 ===
+
+  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {2.0,2.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 3)"];
+  client <-- Server [label = "return int8 robotId = 3"];
+
+  Server -> client [label = "updateGroundTruth ( timestamp, ballInfo, \n robotInfo = {robot1Info, robot2Info, robot3Info}, \n lastTouchedBall = robot1Info, \n colisions = {(robot1Info, robot2Info),(robotXInfo, robotYInfo)})"];
+
+}
+
