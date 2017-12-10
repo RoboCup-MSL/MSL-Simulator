@@ -1,10 +1,10 @@
 seqdiag {
   edge_length = 500;  // default value is 192
 
-  client -> Server [label = "Connect (string teamName = FalconsTeamA, clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = 0"];
+  clientA -> Server [label = "Connect (string teamName = FalconsTeamA, clientType = participant)"];
+  clientA <-- Server [label = "return int8 teamId = 0"];
 
-  client -> Server [label = "Connect (string teamName = FalconsTeamA, clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = -1", note = "Twice same team name will give an error"];
+  clientB -> Server [label = "Connect (string teamName = FalconsTeamA, clientType = participant)"];
+  clientB <-- Server [label = "return int8 teamId = -1", note = "Twice same team name will give an error"];
 }
 

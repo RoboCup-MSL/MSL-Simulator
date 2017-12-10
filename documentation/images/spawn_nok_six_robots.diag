@@ -1,28 +1,28 @@
 seqdiag {
   edge_length = 500;  // default value is 192
 
-  client -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = 0"];
+  clientA -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
+  clientA <-- Server [label = "return int8 teamId = 0"];
 
  === Connected team is prerequisite ===
 
-  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 1)"];
-  client <-- Server [label = "return int8 robotId = 1"];
+  clientA -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 1)"];
+  clientA <-- Server [label = "return int8 robotId = 1"];
 
-  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 2)"];
-  client <-- Server [label = "return int8 robotId = 2"];
+  clientA -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 2)"];
+  clientA <-- Server [label = "return int8 robotId = 2"];
 
-  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 3)"];
-  client <-- Server [label = "return int8 robotId = 3"];
+  clientA -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 3)"];
+  clientA <-- Server [label = "return int8 robotId = 3"];
 
-  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 4)"];
-  client <-- Server [label = "return int8 robotId = 4"];
+  clientA -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 4)"];
+  clientA <-- Server [label = "return int8 robotId = 4"];
 
-  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 5)"];
-  client <-- Server [label = "return int8 robotId = 5"];
+  clientA -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 5)"];
+  clientA <-- Server [label = "return int8 robotId = 5"];
 
-  client -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 1)"];
-  client <-- Server [label = "return int8 robotId = -1", note = "Adding more than 5 \n robots generates an error"];
+  clientA -> Server [label = "Spawn (int8 teamId = 0, initialPosition = {0.0,0.0,0.0}, \n modelType = defaultTriangle, preferredRobotId = 1)"];
+  clientA <-- Server [label = "return int8 robotId = -1", note = "Adding more than 5 \n robots generates an error"];
 
 }
 

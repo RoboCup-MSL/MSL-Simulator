@@ -1,20 +1,20 @@
 seqdiag {
   edge_length = 500;  // default value is 192
  
-  client -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = 0"];
+  clientA -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
+  clientA <-- Server [label = "return int8 teamId = 0"];
 
-  client -> Server [label = "Connect (string teamName = CambadaTeamA, enum clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = 1"];
+  clientB -> Server [label = "Connect (string teamName = CambadaTeamA, enum clientType = participant)"];
+  clientB <-- Server [label = "return int8 teamId = 1"];
 
-  client -> Server [label = "Connect (string teamName = Observer1, enum clientType = observer)"];
-  client <-- Server [label = "return int8 teamId = 10"];
+  clientC -> Server [label = "Connect (string teamName = Observer1, enum clientType = observer)"];
+  clientC <-- Server [label = "return int8 teamId = 10"];
 
-  client -> Server [label = "Connect (string teamName = Observer2, enum clientType = observer)"];
-  client <-- Server [label = "return int8 teamId = 11"];
+  clientD -> Server [label = "Connect (string teamName = Observer2, enum clientType = observer)"];
+  clientD <-- Server [label = "return int8 teamId = 11"];
 
-  client -> Server [label = "Connect (string teamName = Observer3, enum clientType = observer)"];
-  client <-- Server [label = "return int8 teamId = 12"];
+  clientE -> Server [label = "Connect (string teamName = Observer3, enum clientType = observer)"];
+  clientE <-- Server [label = "return int8 teamId = 12"];
 
 }
 

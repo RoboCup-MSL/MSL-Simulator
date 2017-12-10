@@ -1,11 +1,11 @@
 seqdiag {
   edge_length = 500;  // default value is 192
 
-  client -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = 0"];
+  clientA -> Server [label = "Connect (string teamName = FalconsTeamA, enum clientType = participant)"];
+  clientA <-- Server [label = "return int8 teamId = 0"];
 
-  client -> Server [label = "Connect (string teamName = CambadaTeamA, enum clientType = participant)"];
-  client <-- Server [label = "return int8 teamId = 1"];
+  clientB -> Server [label = "Connect (string teamName = CambadaTeamA, enum clientType = participant)"];
+  clientB <-- Server [label = "return int8 teamId = 1"];
 
   simRef -> Server [label = "Connect (string teamName = SimRef1, enum clientType = referee)"];
   simRef <-- Server [label = "return int8 teamId = 2"];
