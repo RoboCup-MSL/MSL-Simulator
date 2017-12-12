@@ -1,13 +1,17 @@
 all: docImage
 
-docImageSrcs = $(wildcard documentation/images/*.diag)
-docImageObjs = $(foreach x, $(basename $(docImageSrcs)), $(x).png)
+docDiagImageSrcs = $(wildcard documentation/images/*.diag)
+docDiagImageObjs = $(foreach x, $(basename $(docDiagImageSrcs)), $(x).png)
+docDotImageSrcs = $(wildcard documentation/images/*.gv)
+docDotImageObjs = $(foreach x, $(basename $(docDotImageSrcs)), $(x).ps)
 
-docImage: $(docImageObjs)
+docImage: $(docDiagImageObjs) $(docDotImageObjs)
 
 %.png: %.diag
 	seqdiag $^ $@
 
+%.ps: %.gv
+	dot -Tps $^ -o $@
 
 clean:
-	rm -f documentation/images/*.png
+	rm -f documentation/images/*.png && rm -f documentation/images/*.ps

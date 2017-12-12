@@ -1,0 +1,11 @@
+digraph graphname {
+                Serv [label="Server" color=Blue, fontcolor=Red, fontsize=24, shape=box]      // node Server
+                TeamAdap [label="Team Adapter" color=Blue, fontcolor=Red, fontsize=24, shape=box]  // node Team Adapter
+                Clients [label="Clients" color=Blue, fontcolor=Red, fontsize=24, shape=box3d]
+
+                Serv->TeamAdap [label="TCP/ip communication", fontcolor=darkgreen] // edge Server->Team Adapter
+                TeamAdap->Serv // edge Server->Team Adapter
+                TeamAdap->Clients [label="(TCP/ip) communication", fontcolor=darkgreen]
+                Clients->TeamAdap
+                Clients->Clients [label="(TCP/ip) communication", fontcolor=darkgreen]
+}
