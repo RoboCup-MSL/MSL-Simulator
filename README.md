@@ -8,3 +8,4 @@ Additional information can be found on the Wiki: https://github.com/RoboCup-MSL/
 
 # Notes
  * sequence diagrams are created by seqdiag (pip install seqdiag)
+ * Graphviz diagrams are created by dot (sudo apt-get install graphviz)
