@@ -1,0 +1,26 @@
+digraph graphname {
+                rankdir=LR
+                Server [label="Server" fontsize=24] 
+                TeamAdapA [label="Adapter Team A" fontsize=24] 
+                TeamAdapB [label="Adapter Team B" fontsize=24] 
+                SimRef [label="Simulator Referee" fontsize=24]
+                
+		TeamAdapA->Server [label="Connect"]
+		TeamAdapA->Server [label="Spawn"]
+		TeamAdapA->Server [label="Despawn"]
+		TeamAdapA->Server [label="Disconnect"]
+		TeamAdapA->Server [label="Update Team Info"]
+
+		TeamAdapB->Server [label="Connect"]
+		TeamAdapB->Server [label="Spawn"]
+		TeamAdapB->Server [label="Despawn"]
+		TeamAdapB->Server [label="Disconnect"]
+		TeamAdapB->Server [label="Update Team Info"]
+
+		SimRef->Server [label="Place Ball"]
+		SimRef->Server [label="Place Robot"]
+
+		Server->TeamAdapA [label="Update Ground Truth"]
+		Server->TeamAdapB [label="Update Ground Truth"]
+		Server->SimRef [label="Update Ground Truth"]
+}
