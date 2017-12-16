@@ -1,6 +1,6 @@
 # General requirement:
-Ubuntu: 16.04
-Default Gazebo version: 7.0; a installation script is provided
+- Ubuntu: 16.04
+- Default Gazebo version: 7.0; a installation script is provided
 
 # Something about robot models
 *_red are robots with red color;
