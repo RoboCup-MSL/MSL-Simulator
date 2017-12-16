@@ -1,0 +1,4 @@
+#/bin/sh
+export GAZEBO_RESOURCE_PATH=${GAZEBO_RESOURCE_PATH}:`find $PWD -type d -name model_description`
+export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:`find $PWD -type d -name model_description`/models
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}

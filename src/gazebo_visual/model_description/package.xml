@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <name>model_description</name>
+  <version>0.0.0</version>
+  <description>Describes robot model for Gazebo</description>
+  <maintainer email="weijia.yao.nudt@gmail.com">Weijia Yao</maintainer>
+  <license>TODO</license>
+  <author email="TODO">TODO</author>
+
+  
+</package>

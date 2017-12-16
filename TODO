@@ -1,0 +1,2 @@
+1. How to programmatically generate labels for the robot's visulization so that we don't have to draw robots individually?
+2. model plugin modification (get rid of ROS and use protobuf messaging mechanism)
